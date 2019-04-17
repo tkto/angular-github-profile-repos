@@ -1,0 +1,52 @@
+<div class="container">
+<div class="panel panel-default">
+  <div class="panel-heading">{{user.name}}</div>
+  <div class="panel-body">
+    <div class="row">
+      <div class="col-md-4 ">
+        <div class="thumbnail">
+          <img class="img-thumbnail" src="{{user.avatar_url}}" alt="...">
+         
+        </div>
+      </div>
+        <div class="col-md-8 ">
+          <div class="stats">
+              <span class="label label-default">{{user.public_repos}} Public Repos</span>
+              <span class="label label-primary">{{user.public_gists}} Public Gist</span>
+              <span class="label label-success">{{user.followers}} Followers</span>
+              <span class="label label-info">{{user.following}} Following</span>
+
+          </div>
+          <br>
+          <div class="list-group">
+              <span class="list list-group-item">{{user.public_repos}} Public Repos</span>
+              <span class="list list-group-item">{{user.public_gists}} Public Gist</span>
+              <span class="list list-group-item">{{user.followers}} Followers</span>
+              <span class="list list-group-item">{{user.following}} Following</span>
+
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="panel panel-default">
+  <div class="panel-heading">User Repos</div>
+  <div class="panel-body">
+<div *ngFor="let repo of repos">
+    <div class="row">
+      <div class="col-md-9 ">
+          <a href="{{repo.html_url}}">    <h4>{{repo.name}}</h4></a>
+          <p>{{repo.description}}</p>
+      </div>
+      <div class="col-md-3 ">
+          <span class="label label-default">{{user.public_repos}} Public Repos</span>
+          <span class="label label-primary">{{user.public_repos}} Public Repos</span>
+
+        </div>
+      
+    </div>
+  </div>
+
+  </div>
+</div>
+</div>
